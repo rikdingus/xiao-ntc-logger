@@ -9,6 +9,7 @@ Features:
 """
 
 import os
+# Python NTC Logger PC Client
 import sys
 import serial
 import json

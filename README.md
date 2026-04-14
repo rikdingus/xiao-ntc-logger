@@ -37,19 +37,33 @@ GND ----------------+-----------+
 3. Select board: `XIAO_ESP32C6`.
 4. Flash the code to your XIAO.
 
-### 2. PC Logger (Linux)
-The logger requires Python 3.7+ and two libraries:
+### 2. PC Logger (Windows/Linux)
+The logger requires Python 3.12+ and several libraries. We recommend using a local virtual environment for isolation and full IDE support.
+
+#### Local Environment Setup (Recommended)
+This repository includes a `.vscode/settings.json` that automatically detects the local `venv`. To set it up manually:
 ```bash
+# Navigate to the pc folder
+cd pc
+
+# Create and activate venv (Windows)
+python -m venv venv
+.\venv\Scripts\activate
+
+# Install requirements
 pip install pyserial rich
 ```
 
 To start logging:
 ```bash
-# Navigate to the pc folder
-cd pc
+python logger.py
+```
 
-# Run the logger
-python3 logger.py
+#### Global Setup (Quick Start)
+Alternatively, you can install the libraries globally:
+```bash
+pip install pyserial rich
+python pc/logger.py
 ```
 
 ## 📊 Features
