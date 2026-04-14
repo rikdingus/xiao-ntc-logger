@@ -1,0 +1,29 @@
+# Arduino
+/build/
+/libraries/
+*.hex
+*.bin
+*.elf
+arduino-cli.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+temperature_logs.csv
+
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+
+# Antigravity / Agentic logs
+/brain/
+/knowledge/
+task.md
+implementation_plan.md
+walkthrough.md
