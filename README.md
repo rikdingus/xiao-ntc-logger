@@ -32,16 +32,20 @@ GND ----------------+-----------+
 ## 🚀 Getting Started
 
 ### 1. Firmware (ESP32-C6)
+
 1. Open `logger_firmware/logger_firmware.ino` in the Arduino IDE.
 2. Install the **ESP32** board manager (version 3.0.0+ for ESP32-C6 support).
 3. Select board: `XIAO_ESP32C6`.
 4. Flash the code to your XIAO.
 
 ### 2. PC Logger (Windows/Linux)
+
 The logger requires Python 3.12+ and several libraries. We recommend using a local virtual environment for isolation and full IDE support.
 
 #### Local Environment Setup (Recommended)
+
 This repository includes a `.vscode/settings.json` that automatically detects the local `venv`. To set it up manually:
+
 ```bash
 # Navigate to the pc folder
 cd pc
@@ -55,18 +59,22 @@ pip install pyserial rich
 ```
 
 To start logging:
+
 ```bash
 python logger.py
 ```
 
 #### Global Setup (Quick Start)
+
 Alternatively, you can install the libraries globally:
+
 ```bash
 pip install pyserial rich
 python pc/logger.py
 ```
 
 ## 📊 Features
+
 - **Factory Calibrated**: Uses `analogReadMilliVolts` to utilize ESP32-C6 internal eFuse calibration.
 - **Real-time Dashboard**: Beautiful terminal UI with live updates.
 - **CSV Logging**: Automatically saves data to `temperature_logs.csv` with ISO timestamps.
